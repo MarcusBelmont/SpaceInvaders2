@@ -1,7 +1,7 @@
 package fr.unilim.iut.SpaceInvaders2;
 
 public class SpaceInvaders {
-
+	char marque;
 	int longueur;
 	int hauteur;
 	Vaisseau vaisseau;
