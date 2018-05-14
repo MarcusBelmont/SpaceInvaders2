@@ -39,16 +39,8 @@ public class testSpaceInvaders {
 		"...............\n" + 
 		".......V.......\n" , spaceinvaders.toString());
 	}		
-	@Test(expected = HorsEspaceJeuException.class)
-	public void test_unNouveauVaisseauEstPositionneHorsEspaceJeuTropADroite_UneExceptionEstLevee() throws Exception {
-		SpaceInvaders spaceinvaders = new SpaceInvaders(15, 10);
-		spaceinvaders.positionnerUnNouveauVaisseau(15,9);
-	}
-	 @Test(expected = HorsEspaceJeuException.class)
-		public void test_unNouveauVaisseauEstPositionneHorsEspaceJeuTropEnBas_UneExceptionEstLevee() throws Exception {
-			SpaceInvaders spaceinvaders = new SpaceInvaders(15, 10);
-			spaceinvaders.positionnerUnNouveauVaisseau(14,10);
-		}
+
+
 	 @Test(expected = HorsEspaceJeuException.class)
 		public void test_unNouveauVaisseauEstPositionneHorsEspaceJeuTropAGauche_UneExceptionEstLevee() throws Exception {
 			SpaceInvaders spaceinvaders = new SpaceInvaders(15, 10);
