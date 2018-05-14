@@ -1,8 +1,12 @@
 package fr.unilim.iut.SpaceInvaders2;
 
+
 import fr.unilim.iut.SpaceInvaders2.utils.HorsEspaceJeuException;
 
 public class SpaceInvaders {
+	
+	
+
 	
 	private static final char MARQUE_VIDE = '.';
 	private static final char MARQUE_VAISSEAU = 'V';

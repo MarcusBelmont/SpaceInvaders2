@@ -3,11 +3,17 @@ package fr.unilim.iut.SpaceInvaders2;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import fr.unilim.iut.SpaceInvaders2.utils.HorsEspaceJeuException;
 
 public class testSpaceInvaders {
+	 private SpaceInvaders spaceinvaders;
+	 @Before
+	    public void initialisation() {
+		    spaceinvaders = new SpaceInvaders(15, 10);
+	    }
 	@Test
 	public void test_AuDebut_JeuSpaceInvaderEstVide() {
 		SpaceInvaders spaceinvaders = new SpaceInvaders(15, 10);
@@ -40,15 +46,19 @@ public class testSpaceInvaders {
 		".......V.......\n" , spaceinvaders.toString());
 	}		
 
-
+	 @Test(expected = HorsEspaceJeuException.class)
+		public void test_unNouveauVaisseauEstPositionneHorsEspaceJeuTropEnBas_UneExceptionEstLevee() throws Exception {
+			
+			spaceinvaders.positionnerUnNouveauVaisseau(14,10);
+		}
 	 @Test(expected = HorsEspaceJeuException.class)
 		public void test_unNouveauVaisseauEstPositionneHorsEspaceJeuTropAGauche_UneExceptionEstLevee() throws Exception {
-			SpaceInvaders spaceinvaders = new SpaceInvaders(15, 10);
+	
 			spaceinvaders.positionnerUnNouveauVaisseau(-1,9);
 		}
 	 @Test(expected = HorsEspaceJeuException.class)
 		public void test_unNouveauVaisseauEstPositionneHorsEspaceJeuTropEnHaut_UneExceptionEstLevee() throws Exception {
-			SpaceInvaders spaceinvaders = new SpaceInvaders(15, 10);
+	
 			spaceinvaders.positionnerUnNouveauVaisseau(14,-1);
 		}
 	 @Test
