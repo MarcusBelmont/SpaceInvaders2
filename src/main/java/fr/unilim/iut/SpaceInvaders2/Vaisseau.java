@@ -14,5 +14,13 @@ public class Vaisseau {
 		
 		return (x2==x&&y2==y);
 	}
+	 public void seDeplacerVersLaDroite() {
+	      this.x = this.x + 1 ;
+  }
+
+	public int abscisse() {
+		// TODO Auto-generated method stub
+		return this.x;
+	}
 
 }
