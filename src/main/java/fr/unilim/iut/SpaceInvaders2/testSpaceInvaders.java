@@ -61,9 +61,10 @@ public class testSpaceInvaders {
 	
 			spaceinvaders.positionnerUnNouveauVaisseau(14,-1);
 		}
+	 
 	 @Test
 		public void test_UnNouveauVaisseauPositionneHorsEspaceJeu_DoitLeverUneException() {
-			SpaceInvaders spaceinvaders = new SpaceInvaders(15, 10);
+			
 			
 			try {
 				spaceinvaders.positionnerUnNouveauVaisseau(15,9);
@@ -93,6 +94,7 @@ public class testSpaceInvaders {
 			}
 				
 		}
+	 
 
 
 }
