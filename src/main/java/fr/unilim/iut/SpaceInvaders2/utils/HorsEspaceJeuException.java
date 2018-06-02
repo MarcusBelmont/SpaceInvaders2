@@ -11,4 +11,3 @@ package fr.unilim.iut.SpaceInvaders2.utils;
 		    }
 
 	    }
-
