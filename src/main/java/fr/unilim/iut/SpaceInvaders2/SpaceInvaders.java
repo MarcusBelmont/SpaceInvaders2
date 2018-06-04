@@ -92,32 +92,32 @@ public class SpaceInvaders implements Jeu{
 
 		vaisseau = new Vaisseau(dimension,position,vitesse);
 	}
-	  @Override
-      public void evoluer(Commande commandeUser) {
-		
-         if (commandeUser.gauche) {
-             deplacerVaisseauVersLaGauche();
-         }
-		
-        if (commandeUser.droite) {
-	        deplacerVaisseauVersLaDroite();
-        }
+	@Override
+	public void evoluer(Commande commandeUser) {
 
-      }
+		if (commandeUser.gauche) {
+			deplacerVaisseauVersLaGauche();
+		}
 
-  
-     @Override
-     public boolean etreFini() {
-        return false; 
-     }
+		if (commandeUser.droite) {
+			deplacerVaisseauVersLaDroite();
+		}
 
-     public Vaisseau recupererVaisseau() {
- 		return this.vaisseau;
- 	}
-     public void initialiserJeu() {
-		    Position positionVaisseau = new Position(this.longueur/2,this.hauteur-1);
-		    Dimension dimensionVaisseau = new Dimension(Constante.VAISSEAU_LONGUEUR, Constante.VAISSEAU_HAUTEUR);
-		    positionnerUnNouveauVaisseau(dimensionVaisseau, positionVaisseau, 1);
-	    }
+	}
+
+
+	@Override
+	public boolean etreFini() {
+		return false; 
+	}
+
+	public Vaisseau recupererVaisseau() {
+		return this.vaisseau;
+	}
+	public void initialiserJeu() {
+		Position positionVaisseau = new Position(this.longueur/2,this.hauteur-1);
+		Dimension dimensionVaisseau = new Dimension(Constante.VAISSEAU_LONGUEUR, Constante.VAISSEAU_HAUTEUR);
+		positionnerUnNouveauVaisseau(dimensionVaisseau, positionVaisseau, Constante.VAISSEAU_VITESSE);
+	}
 
 }

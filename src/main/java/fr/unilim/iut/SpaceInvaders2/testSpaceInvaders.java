@@ -11,6 +11,7 @@ import fr.unilim.iut.SpaceInvaders2.utils.HorsEspaceJeuException;
 
 public class testSpaceInvaders {
 	 private SpaceInvaders spaceinvaders;
+	 
 	 @Before
 	    public void initialisation() {
 		    spaceinvaders = new SpaceInvaders(15, 10);
